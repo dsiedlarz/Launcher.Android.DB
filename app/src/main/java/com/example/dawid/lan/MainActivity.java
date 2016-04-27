@@ -39,7 +39,7 @@ public class MainActivity extends FragmentActivity {
         myAdapter.setManager(menager);
         viewPager.setAdapter(myAdapter);
         dbHandler = new MyDBHandler(this, null, null, 1);
-        if(dbHandler.databaseToString(1).compareToIgnoreCase("problem")==0){
+        if(dbHandler.databaseToString(1).compareToIgnoreCase("dupa")==0){
             dbHandler.addProduct(new Product(1,"Telefon"));
             dbHandler.addProduct(new Product(2,"com.android.dialer"));
             dbHandler.addProduct(new Product(3,"SMS"));
@@ -51,38 +51,49 @@ public class MainActivity extends FragmentActivity {
             dbHandler.addProduct(new Product(9,"Aparat"));
             dbHandler.addProduct(new Product(10,"com.android.camera2"));
         }
-        Set2=dbHandler.databaseToString(2);
+      /*  Set2=dbHandler.databaseToString(2);
         Set4=dbHandler.databaseToString(4);
         Set6=dbHandler.databaseToString(6);
         Set8=dbHandler.databaseToString(8);
         Set10=dbHandler.databaseToString(10);
-
+*/
 
 
         //Toast.makeText(this,dbHandler.databaseToString(1),Toast.LENGTH_LONG).show();
     }
 
     public void short1(View view){
-        Intent i = menager.getLaunchIntentForPackage( Set8);
+        Intent i = menager.getLaunchIntentForPackage(dbHandler.databaseToString(2));
         startActivity(i);
     }
     public void short2(View view){
-        Intent i = menager.getLaunchIntentForPackage(Set2);
+        Intent i = menager.getLaunchIntentForPackage(dbHandler.databaseToString(4));
         startActivity(i);
     }
     public void short3(View view){
-        Intent i = menager.getLaunchIntentForPackage(Set4);
+        Intent i = menager.getLaunchIntentForPackage(dbHandler.databaseToString(6));
         startActivity(i);
     }
     public void short4(View view){
-        Intent i = menager.getLaunchIntentForPackage(Set6);
+        Intent i = menager.getLaunchIntentForPackage(dbHandler.databaseToString(8));
         startActivity(i);
     }
     public void short5(View view){
-        Intent i = menager.getLaunchIntentForPackage(Set10);
+        Intent i = menager.getLaunchIntentForPackage(dbHandler.databaseToString(10));
         startActivity(i);
     }
 
+    public void clockClick(View view){
+        Intent i = menager.getLaunchIntentForPackage("com.android.deskclock");
+        startActivity(i);
+
+    }
+
+    public void calendarClick(View view){
+        Intent i = menager.getLaunchIntentForPackage("com.android.calendar");
+        startActivity(i);
+
+    }
 
 }
 

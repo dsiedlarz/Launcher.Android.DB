@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by Dawid on 2015-08-27.
@@ -42,16 +43,26 @@ public class FragmentA extends Fragment {
         name4=(Button)view.findViewById(R.id.S4);
         name5=(Button)view.findViewById(R.id.S5);
 
-        name1.setText(dbHandler.databaseToString(1));
-        name2.setText(dbHandler.databaseToString(3));
-        name3.setText(dbHandler.databaseToString(5));
-        name4.setText(dbHandler.databaseToString(7));
-        name5.setText(dbHandler.databaseToString(9));
+        reloadData();
 
         return view;
 
     }
 
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        reloadData();
 
+    }
+
+    public void reloadData(){
+        name1.setText(dbHandler.databaseToString(1));
+        name2.setText(dbHandler.databaseToString(3));
+        name3.setText(dbHandler.databaseToString(5));
+        name4.setText(dbHandler.databaseToString(7));
+        name5.setText(dbHandler.databaseToString(9));
+
+    }
 }

@@ -33,7 +33,7 @@ public class FragmentB extends ListFragment {
     public FragmentB() {
     }
 
-    public FragmentB (PackageManager manager) {
+    public FragmentB(PackageManager manager) {
         this.manager = manager;
 
         loadApps();
@@ -53,18 +53,18 @@ public class FragmentB extends ListFragment {
 
         getListView().setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
-           @Override
+            @Override
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-             Toast.makeText(getActivity(), "On long click listener " +arg2+" "+arg3, Toast.LENGTH_LONG).show();
-               Intent i = new Intent(getContext(), Settings1.class);
-               i.putExtra("LABEL",apps.get(arg2).label.toString());
-               i.putExtra("NAME",apps.get(arg2).name.toString());
+                Toast.makeText(getActivity(), "On long click listener " + arg2 + " " + arg3, Toast.LENGTH_LONG).show();
+                Intent i = new Intent(getActivity(), Settings1.class);
+                i.putExtra("LABEL", apps.get(arg2).label.toString());
+                i.putExtra("NAME", apps.get(arg2).name.toString());
                 startActivity(i);
-               return true;
-                }
+                return true;
+            }
         });
 
-                loadListView();
+        loadListView();
     }
 
 
@@ -139,17 +139,10 @@ public class FragmentB extends ListFragment {
     }
 
 
-
-
-
-
-
-
-
     private void loadListView() {
 
-    Context context= getActivity();
-        layoutInflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        Context context = getActivity();
+        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         ArrayAdapter<AppDetail> adapter = new ArrayAdapter<AppDetail>(context,
                 R.layout.list_item,
@@ -174,12 +167,8 @@ public class FragmentB extends ListFragment {
             }
         };
 
-       setListAdapter(adapter);
+        setListAdapter(adapter);
     }
-
-
-
-
 
 
 }

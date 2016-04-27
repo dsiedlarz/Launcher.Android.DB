@@ -20,7 +20,8 @@
         android:layout_centerHorizontal="true"
         android:textSize="75dp"
         android:format12Hour="HH:mm:ss "
-        android:format24Hour="HH:mm:ss" />
+        android:format24Hour="HH:mm:ss"
+        android:onClick="clockClick" />
 
     <Button
         android:layout_width="match_parent"
@@ -66,5 +67,6 @@
         android:layout_centerHorizontal="true"
         android:format12Hour="d MMMM yyyy"
         android:format24Hour="d MMMM yyyy"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:onClick="calendarClick" />
 </RelativeLayout>
