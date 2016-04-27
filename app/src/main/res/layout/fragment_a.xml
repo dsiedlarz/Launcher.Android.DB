@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MUZYKA"
+        android:id="@+id/S4"
+        android:onClick="short4"
+        android:layout_above="@+id/S5"
+        android:layout_alignParentStart="true" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="75dp"
+        android:format12Hour="HH:mm:ss "
+        android:format24Hour="HH:mm:ss" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INTERNET"
+        android:id="@+id/S3"
+        android:onClick="short3"
+        android:layout_above="@+id/S4"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SMS"
+        android:id="@+id/S2"
+        android:onClick="short2"
+        android:layout_above="@+id/S3"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TELEFON"
+        android:id="@+id/S1"
+        android:onClick="short1"
+        android:layout_above="@+id/S2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="APARAT"
+        android:id="@+id/S5"
+        android:onClick="short5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock2"
+        android:layout_below="@+id/textClock"
+        android:layout_centerHorizontal="true"
+        android:format12Hour="d MMMM yyyy"
+        android:format24Hour="d MMMM yyyy"
+        android:textSize="30dp" />
+</RelativeLayout>
